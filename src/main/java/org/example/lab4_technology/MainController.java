@@ -9,12 +9,16 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lombok.SneakyThrows;
 import org.example.lab4_technology.data.Subjects;
+import org.example.lab4_technology.data.Teachers;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainController {
+    @FXML private TableView<Teachers> teachersTable;
+    @FXML private TableColumn<Teachers, Integer> teachersIdCol;
+    @FXML private TableColumn<Teachers, String> fullNameCol;
     private Connection connection;
     @FXML private TableView<Subjects> subjectsTable;
     @FXML private TableColumn<Subjects,Integer> subjectsIdCol;
