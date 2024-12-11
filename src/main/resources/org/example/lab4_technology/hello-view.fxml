@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane fx:controller="org.example.lab4_technology.MainController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <TableView fx:id="subjectsTable" layoutX="14.0" layoutY="12.0" prefHeight="197.0" prefWidth="297.0">
+               <columns>
+                   <TableColumn fx:id="subjectsIdCol" prefWidth="112.0" text="SubjectId"/>
+                   <TableColumn fx:id="nameCol" prefWidth="182.0" text="Name"/>
+               </columns>
+           </TableView>
+       </AnchorPane>
+   </center>
+   <top>
+       <VBox prefHeight="139.0" prefWidth="862.0" BorderPane.alignment="CENTER">
+           <MenuBar>
+               <Menu mnemonicParsing="false" text="File">
+                   <MenuItem mnemonicParsing="false" text="Close"/>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Edit">
+                   <MenuItem mnemonicParsing="false" text="Delete"/>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                   <MenuItem mnemonicParsing="false" text="About"/>
+               </Menu>
+           </MenuBar>
+           <ToolBar prefHeight="40.0" prefWidth="200.0">
+               <Button mnemonicParsing="false" text="Button"/>
+               <Button onAction="#deleteSubject" mnemonicParsing="false" text="Delete"/>
+           </ToolBar>
+       </VBox>
+   </top>
+</BorderPane>
